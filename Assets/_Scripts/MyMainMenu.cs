@@ -10,6 +10,8 @@ public class MyMainMenu : MonoBehaviour
 
     public Text kidName_1;
     public Text kidName_2;
+    public Text GenderText;
+    
     public void SetAge(int agee)
     {
         age = agee;
@@ -25,5 +27,10 @@ public class MyMainMenu : MonoBehaviour
     {
         kidName_1.text = nameKid;
         kidName_2.text = nameKid;
+    }
+    public void SetGender(string gend)
+    {
+        PlayerPrefs.SetString("gender", gend);
+        GenderText.text = gend;
     }
 }
