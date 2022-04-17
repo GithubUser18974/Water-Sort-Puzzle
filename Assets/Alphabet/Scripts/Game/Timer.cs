@@ -65,6 +65,7 @@ public class Timer : MonoBehaviour
 						timeInSeconds = 0;
 						InvokeRepeating("Wait",0,sleepTime);
 				}
+
 		}
 
 		/// <summary>

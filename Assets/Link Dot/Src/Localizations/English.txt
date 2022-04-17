@@ -1,0 +1,31 @@
+titleImageName = title_en
+
+
+btnyes = YES
+btnno = NO
+
+
+btnBack = back
+btnRetry = retry
+btnNext = next
+
+totalScore = TOTAL SCORE:
+continue = CONTINUE
+
+
+askTip = Are you sure to use tip?
+
+levelComplete = level completed
+
+level = level
+nextTip = next free tip: 
+seconds = seconds
+
+btneasy = Easy
+btnmedium = Medium
+btnadvanced = Advanced
+btnhard = Hard
+btnexpert = Expert
+
+levelTitle = Choose Level
+mainTitle = Link Dots Pro

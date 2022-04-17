@@ -33,7 +33,8 @@ public class Progress : MonoBehaviour
 		/// The progress image.
 		/// </summary>
 		public Image progressImage;
-
+	public bool noGameManger = false;
+	public float Mytime = 10;
 		/// <summary>
 		/// The stars number.
 		/// </summary>
@@ -50,6 +51,10 @@ public class Progress : MonoBehaviour
 				if (gameManager == null) {
 						gameManager = GameObject.FindObjectOfType<GameManager> ();
 				}
+        if (noGameManger)
+        {
+
+        }
 		}
 
 		/// <summary>
@@ -59,9 +64,58 @@ public class Progress : MonoBehaviour
 		public void SetProgress (float currentTime)
 		{
 				if (gameManager == null) {
-						return;
-				}
+		
 
+			if (progressImage != null)
+				progressImage.fillAmount = 1 - (currentTime / (Mytime * 1.0f + 1));
+
+			if (currentTime >= 0 && currentTime <= Mytime)
+			{
+				if (levelStars[0] != null)
+				{
+					levelStars[0].sprite = starOn;
+				}
+				if (levelStars[1] != null)
+				{
+					levelStars[1].sprite = starOn;
+				}
+				if (levelStars[2] != null)
+				{
+					levelStars[2].sprite = starOn;
+				}
+				if (progressImage != null)
+					progressImage.color = Colors.greenColor;
+
+				starsNumber = WinDialog.StarsNumber.THREE;
+			}
+			else if (currentTime > Mytime && currentTime <= Mytime+1)
+			{
+				if (levelStars[2] != null)
+				{
+					levelStars[2].sprite = starOff;
+				}
+				if (progressImage != null)
+					progressImage.color = Colors.yellowColor;
+				starsNumber = WinDialog.StarsNumber.TWO;
+
+			}
+			else
+			{
+				if (levelStars[1] != null)
+				{
+					levelStars[1].sprite = starOff;
+				}
+				if (levelStars[2] != null)
+				{
+					levelStars[2].sprite = starOff;
+				}
+				if (progressImage != null)
+					progressImage.color = Colors.redColor;
+				starsNumber = WinDialog.StarsNumber.ONE;
+			}
+			return;
+				}
+				/**************************************/
 				if (gameManager.shape == null) {
 						return;
 				}

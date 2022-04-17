@@ -24,7 +24,6 @@ public class LevelCompletePanel : ShowHidable
         _toastTxt.text = _toasts.GetRandom();
         _toastTxt.gameObject.SetActive(true);
 
-        AdsManager.ShowOrPassAdsIfCan();
     }
 
 
