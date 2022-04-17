@@ -1467,7 +1467,6 @@ MonoBehaviour:
   - {fileID: 1000013510568448, guid: 7a54a11abd3629e408adb8e4f06002b0, type: 3}
   - {fileID: 185084, guid: c5ed319a45b3b044091f7a011d01dc47, type: 3}
   - {fileID: 66512970}
-  - {fileID: 1422784616183516, guid: 0f6bffb227fd5e2498728e6741ed35a4, type: 3}
 --- !u!114 &537580294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4982,47 +4981,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036788963}
   m_CullTransparentMesh: 0
---- !u!1001 &2037161051
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4289065575218878, guid: 0f6bffb227fd5e2498728e6741ed35a4, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4289065575218878, guid: 0f6bffb227fd5e2498728e6741ed35a4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4289065575218878, guid: 0f6bffb227fd5e2498728e6741ed35a4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4289065575218878, guid: 0f6bffb227fd5e2498728e6741ed35a4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4289065575218878, guid: 0f6bffb227fd5e2498728e6741ed35a4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4289065575218878, guid: 0f6bffb227fd5e2498728e6741ed35a4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4289065575218878, guid: 0f6bffb227fd5e2498728e6741ed35a4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4289065575218878, guid: 0f6bffb227fd5e2498728e6741ed35a4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0f6bffb227fd5e2498728e6741ed35a4, type: 3}
 --- !u!1 &2075760499
 GameObject:
   m_ObjectHideFlags: 0

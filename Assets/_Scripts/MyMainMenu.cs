@@ -15,11 +15,13 @@ public class MyMainMenu : MonoBehaviour
     public void SetAge(int agee)
     {
         age = agee;
+        SendMailDemo.Instance.userData.age = agee+"";
         PlayerPrefs.SetInt("age", age);
     }
     public void SetName(InputField fields)
     {
         nameKid = fields.text;
+        SendMailDemo.Instance.userData.name = nameKid;
         PlayerPrefs.SetString("name", nameKid);
         UpdateUI();
     }
@@ -31,6 +33,7 @@ public class MyMainMenu : MonoBehaviour
     public void SetGender(string gend)
     {
         PlayerPrefs.SetString("gender", gend);
+        SendMailDemo.Instance.userData.gender = gend;
         GenderText.text = gend;
     }
 }

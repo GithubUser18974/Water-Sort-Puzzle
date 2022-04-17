@@ -236,7 +236,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   values:
   - {fileID: 112370, guid: add9c38530df7444fbdc709f74f85f27, type: 3}
-  - {fileID: 1422784616183516, guid: 0f6bffb227fd5e2498728e6741ed35a4, type: 3}
 --- !u!114 &537580294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,7 +490,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6b25620d2d919f14eaab1a5219055a22, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 41b58a7f1c05fdb43bb9cb8d04e1b5b3, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -523,10 +522,10 @@ RectTransform:
   m_Father: {fileID: 537580289}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.102000006, y: 0.37626767}
-  m_AnchorMax: {x: 0.896, y: 0.66581696}
-  m_AnchoredPosition: {x: 0, y: 1}
-  m_SizeDelta: {x: 0, y: -2}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1545143900
 Animator:
