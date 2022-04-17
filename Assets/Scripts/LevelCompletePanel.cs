@@ -11,11 +11,12 @@ public class LevelCompletePanel : ShowHidable
     [SerializeField] private Text _levelTxt;
     [SerializeField]private List<string> _toasts = new List<string>();
 
-
+    public bool isNeedLevel = false;
 
     private void Awake()
     {
-        _levelTxt.text = $" Level {LevelManager.Instance.Level.no}"; 
+        if(!isNeedLevel)
+            _levelTxt.text = $" Level {LevelManager.Instance.Level.no}"; 
     }
 
     protected override void OnShowCompleted()
