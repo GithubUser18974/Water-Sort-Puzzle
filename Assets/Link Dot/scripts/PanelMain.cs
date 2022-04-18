@@ -42,7 +42,7 @@ namespace DOTS
 
 
             if (all_level != null) return;
-            SceneManager.LoadScene("LevelMenu", LoadSceneMode.Additive);
+            SceneManager.LoadScene("linkLevelMenu", LoadSceneMode.Additive);
 
 
 
@@ -85,7 +85,7 @@ namespace DOTS
 
                     if (GameData.instance.mode == 1)//this is always for test because you may not start from the initiate window.
                     {
-                        fadeIn("levelMenu");
+                        fadeIn("linklevelMenu");
 
                     }
                     else
@@ -202,6 +202,15 @@ namespace DOTS
 
         void fadeInOver(string sceneName)
         {
+            if (sceneName.Contains("link"))
+            {
+
+            }
+            else
+            {
+                string T = "link" + sceneName;
+                sceneName = T;
+            }
             SceneManager.LoadScene(sceneName);
         }
 

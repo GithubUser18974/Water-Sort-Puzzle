@@ -29,7 +29,7 @@ namespace DOTS
 
 
             if (all_game != null) return;
-            SceneManager.LoadScene("Game", LoadSceneMode.Additive);
+            SceneManager.LoadScene("linkGame", LoadSceneMode.Additive);
 
 
             GameData.getInstance().currentScene = 1;
@@ -491,7 +491,7 @@ namespace DOTS
             GameManager.getInstance().playSfx("click");
             if (all_mainMenu == null || GameData.instance.mode == 1)//this is always for test because you may not start from the initiate window.
             {
-                fadeIn("MainMenu");
+                fadeIn("linkMainMenu");
             }
             else
             {
@@ -510,7 +510,7 @@ namespace DOTS
         public void loadGameScene()
         {
 
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("linkGame");
         }
         /// <summary>
         /// Loads the main scene.
@@ -518,7 +518,7 @@ namespace DOTS
         public void loadMainScene()
         {
 
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("linkMainMenu");
         }
 
 
@@ -590,6 +590,13 @@ namespace DOTS
         /// <param name="sceneName">Scene name.</param>
         void fadeInOver(string sceneName)
         {
+            if (sceneName.Contains("link")){
+
+            }else
+            {
+               string T = "link" + sceneName;
+                sceneName = T;
+            }
             SceneManager.LoadScene(sceneName);
         }
 

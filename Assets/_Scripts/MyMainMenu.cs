@@ -11,7 +11,10 @@ public class MyMainMenu : MonoBehaviour
     public Text kidName_1;
     public Text kidName_2;
     public Text GenderText;
-    
+    public void GoScene(string sceneName)
+    {
+      MyLevelManager.Instance.GoScene(sceneName);
+    }
     public void SetAge(int agee)
     {
         age = agee;

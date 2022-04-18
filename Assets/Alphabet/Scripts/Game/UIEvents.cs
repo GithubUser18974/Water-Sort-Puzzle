@@ -50,7 +50,8 @@ public class UIEvents : MonoBehaviour
 		public void LoadAlbumScene ()
 		{
 			if(!string.IsNullOrEmpty(ShapesManager.shapesManagerReference))
-				StartCoroutine(SceneLoader.LoadSceneAsync (GameObject.Find(ShapesManager.shapesManagerReference).GetComponent<ShapesManager>().sceneName));
+	
+				StartCoroutine(SceneLoader.LoadSceneAsync ("al" + GameObject.Find(ShapesManager.shapesManagerReference).GetComponent<ShapesManager>().sceneName));
 		}
 
 		public void LoadLowercaseAlbumScene ()
@@ -64,7 +65,10 @@ public class UIEvents : MonoBehaviour
 			ShapesManager.shapesManagerReference = "UShapesManager";
 			StartCoroutine(SceneLoader.LoadSceneAsync ("alUppercaseAlbum"));
 		}
-
+	public void Goto_MyMainMenu()
+    {
+		MyLevelManager.Instance.GoScene("MyMainMenu");
+    }
 		public void LoadNumbersAlbumScene ()
 		{
 			ShapesManager.shapesManagerReference = "NShapesManager";

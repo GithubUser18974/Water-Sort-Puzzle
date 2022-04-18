@@ -18,7 +18,7 @@ namespace DOTS
 			if (loaded)
 				return;
 			DontDestroyOnLoad(gameObject);
-			SceneManager.LoadSceneAsync("MainMenu");
+			SceneManager.LoadSceneAsync("linkMainMenu");
 			float tradio = (float)Screen.currentResolution.width / (float)Screen.currentResolution.height;
 
 
@@ -84,17 +84,17 @@ namespace DOTS
 				Time.timeScale = 1;
 				//			GameData.getInstance().init();
 				Debug.Log(Application.loadedLevelName);
-				if (Application.loadedLevelName == "Game")
+				if (Application.loadedLevelName == "linkGame")
 				{
 					GameManager.getInstance().stopAllSFX();
-					SceneManager.LoadScene("LevelMenu");
+					SceneManager.LoadScene("linkLevelMenu");
 				}
-				else if (Application.loadedLevelName == "LevelMenu")
+				else if (Application.loadedLevelName == "linkLevelMenu")
 				{
 					GameManager.getInstance().stopAllSFX();
-					SceneManager.LoadScene("MainMenu");
+					SceneManager.LoadScene("linkMainMenu");
 				}
-				else if (Application.loadedLevelName == "MainMenu")
+				else if (Application.loadedLevelName == "linkMainMenu")
 				{
 
 					GameObject.Find("PanelFade").SendMessage("exit");

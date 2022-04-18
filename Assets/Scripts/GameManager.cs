@@ -35,13 +35,13 @@ namespace dotmob
                 loadingPanel.Speed = loadingScreenSpeed;
                 loadingPanel.Show(completed: () =>
                 {
-                    SceneManager.LoadScene(sceneName);
+                    SceneManager.LoadScene("color"+sceneName);
                     loadingPanel.Hide();
                 });
             }
             else
             {
-                SceneManager.LoadScene(sceneName);
+                SceneManager.LoadScene("color" + sceneName);
             }
         }
 

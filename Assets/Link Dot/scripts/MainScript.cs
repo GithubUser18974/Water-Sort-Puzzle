@@ -412,7 +412,7 @@ namespace DOTS
         {
             GameObject.Find("particle").SetActive(false);
 
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("linkMainMenu");
         }
 
         public void loadLevelScene()
@@ -441,7 +441,7 @@ namespace DOTS
             {
                 //GameObject.Find("particle").SetActive(false);
 
-                SceneManager.LoadScene("LevelMenu");
+                SceneManager.LoadScene("linkLevelMenu");
             }
         }
 
