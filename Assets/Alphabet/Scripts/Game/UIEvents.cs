@@ -40,11 +40,11 @@ public class UIEvents : MonoBehaviour
 		}
 
 		public void LoadMainScene(){
-			StartCoroutine(SceneLoader.LoadSceneAsync ("Main"));
+			StartCoroutine(SceneLoader.LoadSceneAsync ("alMain"));
 		}
 
 		public void LoadGameScene(){
-			StartCoroutine(SceneLoader.LoadSceneAsync ("Game"));
+			StartCoroutine(SceneLoader.LoadSceneAsync ("alGame"));
 		}
 
 		public void LoadAlbumScene ()
@@ -56,25 +56,25 @@ public class UIEvents : MonoBehaviour
 		public void LoadLowercaseAlbumScene ()
 		{
 			ShapesManager.shapesManagerReference = "LShapesManager";
-			StartCoroutine(SceneLoader.LoadSceneAsync ("LowercaseAlbum"));
+			StartCoroutine(SceneLoader.LoadSceneAsync ("alLowercaseAlbum"));
 		}
 
 		public void LoadUppercaseAlbumScene ()
 		{
 			ShapesManager.shapesManagerReference = "UShapesManager";
-			StartCoroutine(SceneLoader.LoadSceneAsync ("UppercaseAlbum"));
+			StartCoroutine(SceneLoader.LoadSceneAsync ("alUppercaseAlbum"));
 		}
 
 		public void LoadNumbersAlbumScene ()
 		{
 			ShapesManager.shapesManagerReference = "NShapesManager";
-			StartCoroutine(SceneLoader.LoadSceneAsync ("NumbersAlbum"));
+			StartCoroutine(SceneLoader.LoadSceneAsync ("alNumbersAlbum"));
 		}
 
 		public void LoadSentenceAlbumScene ()
 		{
 			ShapesManager.shapesManagerReference = "SShapesManager";
-			StartCoroutine(SceneLoader.LoadSceneAsync ("SentenceAlbum"));
+			StartCoroutine(SceneLoader.LoadSceneAsync ("alSentenceAlbum"));
 		}
 
 		public void NextClickEvent ()

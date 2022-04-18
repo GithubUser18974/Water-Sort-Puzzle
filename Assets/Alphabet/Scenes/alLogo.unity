@@ -559,4 +559,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sleepTime: 4
-  nextSceneName: Main
+  nextSceneName: alMain

@@ -14,4 +14,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 9b3f31e49fb38974b940df2586d0bc18
+  - enabled: 1
+    path: Assets/Alphabet/Scenes/alGame.unity
+    guid: 580dc37f8a1ef3e468daaf4e0efcc090
+  - enabled: 1
+    path: Assets/Alphabet/Scenes/alLogo.unity
+    guid: b22379b4eb3e7124f91f110d74300ba6
+  - enabled: 1
+    path: Assets/Alphabet/Scenes/alLowercaseAlbum.unity
+    guid: 80f2728e100774d43884636734a4402b
+  - enabled: 1
+    path: Assets/Alphabet/Scenes/alMain.unity
+    guid: d20ccbc3f8900ac4b8925a43e8e0397a
+  - enabled: 1
+    path: Assets/Alphabet/Scenes/alNumbersAlbum.unity
+    guid: db10ab28836dba149ba60bf86e2a3864
+  - enabled: 1
+    path: Assets/Alphabet/Scenes/alSentenceAlbum.unity
+    guid: db9457b3cbbcbb94b9294d72dd8d08a0
+  - enabled: 1
+    path: Assets/Alphabet/Scenes/alUppercaseAlbum.unity
+    guid: 37c47f3e137126146aa17870dd97081b
   m_configObjects: {}
