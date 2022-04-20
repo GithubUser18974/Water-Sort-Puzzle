@@ -19,19 +19,19 @@ public class MyMainMenu : MonoBehaviour
 
     public GameObject Canvas_1;
     public GameObject Canvas_2;
-    //private void Start()
-    //{
-    //    if (MyLevelManager.Instance.firstTime)
-    //    {
-    //        Canvas_1.SetActive(true);
-    //        Canvas_2.SetActive(false);
-    //    }
-    //    else
-    //    {
-    //        Canvas_1.SetActive(false);
-    //        Canvas_2.SetActive(true);
-    //    }
-    //}
+        //private void Start()
+        //{
+        //    if (MyLevelManager.Instance.firstTime)
+        //    {
+        //        Canvas_1.SetActive(true);
+        //        Canvas_2.SetActive(false);
+        //    }
+        //    else
+        //    {
+        //        Canvas_1.SetActive(false);
+        //        Canvas_2.SetActive(true);
+        //    }
+        //}
 
 
     public void GoScene(string sceneName)
