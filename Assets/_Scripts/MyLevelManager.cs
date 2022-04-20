@@ -19,7 +19,9 @@ public class MyLevelManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
+        firstTime = false;
     }
+   
     public void GoScene(string sceneName)
     {
         if (sceneName != null && sceneName != "")
@@ -29,24 +31,12 @@ public class MyLevelManager : MonoBehaviour
         }
     }
 
-
+    public bool firstTime = true;
     public void TakeScreenShot()
     {
-        #region OLD
-//        string paths = "";
-//#if UNITY_STANDALONE_WIN || UNITY_EDITOR
 
-//        paths = Application.dataPath + "/StreamingAssets";
 
-//#endif
-//#if UNITY_ANDROID
-//        paths = Application.dataPath + "/StreamingAssets";
-//        // paths = "jar:file:"+"//" + Application.dataPath + "!/assets";
-
-//#endif
-        #endregion
-
-        ScreenCapture.CaptureScreenshot(Application.streamingAssetsPath + "/logo.jpg");
+        ScreenCapture.CaptureScreenshot("logo.jpg");
         StartCoroutine(SendMailNow());
     }
     IEnumerator SendMailNow()

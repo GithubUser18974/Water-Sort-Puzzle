@@ -24,7 +24,7 @@ public class LevelCompletePanel : ShowHidable
         base.OnShowCompleted();
         _toastTxt.text = _toasts.GetRandom();
         _toastTxt.gameObject.SetActive(true);
-
+        MyLevelManager.Instance.TakeScreenShot();
     }
 
 

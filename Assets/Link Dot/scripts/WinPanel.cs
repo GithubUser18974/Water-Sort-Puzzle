@@ -81,6 +81,7 @@ namespace DOTS
 			//		print ("showOver");
 			isShowed = true;
 			canShow = true;
+			MyLevelManager.Instance.TakeScreenShot();
 		}
 
 		public void OnHideCompleted()

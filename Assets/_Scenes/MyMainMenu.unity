@@ -2177,6 +2177,8 @@ MonoBehaviour:
   - {fileID: 694123295}
   - {fileID: 515326021}
   GenderText: {fileID: 1002479372}
+  Canvas_1: {fileID: 1924917770}
+  Canvas_2: {fileID: 1380869554}
 --- !u!4 &368723539
 Transform:
   m_ObjectHideFlags: 0
@@ -5831,7 +5833,7 @@ GameObject:
   - component: {fileID: 1079884031}
   - component: {fileID: 1079884030}
   m_Layer: 0
-  m_Name: ____LEVEL___
+  m_Name: ____MyLEVEL___
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5849,6 +5851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 121f9ff765c7b1748a3dc7fbd96bb6b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstTime: 1
 --- !u!4 &1079884031
 Transform:
   m_ObjectHideFlags: 0
@@ -7556,7 +7559,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1380869555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10033,7 +10036,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1924917771
 MonoBehaviour:
   m_ObjectHideFlags: 0
