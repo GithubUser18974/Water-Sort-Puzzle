@@ -666,8 +666,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -59, y: 92.5}
-  m_SizeDelta: {x: 65, y: 52}
+  m_AnchoredPosition: {x: -54.37, y: 94.43}
+  m_SizeDelta: {x: 55.747307, y: 55.856613}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &450968746
 MonoBehaviour:
@@ -713,14 +713,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 623411719}
-        m_MethodName: OnClick
-        m_Mode: 2
+        m_MethodName: GoScene
+        m_Mode: 5
         m_Arguments:
-          m_ObjectArgument: {fileID: 450968744}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MyMainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &450968747
@@ -742,7 +742,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e362aa7c2eccc53429f257205f608b72, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05bd8eb881b0c4345bcdad5b3c990e9b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1658,7 +1658,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -37.3}
+  m_AnchoredPosition: {x: 0, y: -37.30005}
   m_SizeDelta: {x: 0, y: 74.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1289852550

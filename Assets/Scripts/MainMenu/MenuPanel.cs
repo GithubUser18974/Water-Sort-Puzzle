@@ -16,6 +16,9 @@ namespace MainMenu
         {
 
         }
-
+        public void GoScene(string names)
+        {
+            MyLevelManager.Instance.GoScene(names);
+        }
     }
 }

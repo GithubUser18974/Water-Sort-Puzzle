@@ -187,6 +187,7 @@ public class WinDialog : MonoBehaviour
 		private IEnumerator ShowEffectCouroutine (Transform fadingStar)
 		{
 				yield return new WaitForSeconds (0.5f);
+		MyLevelManager.Instance.TakeScreenShot();
 				//fadingStar.Find ("Effect").GetComponent<ParticleEmitter> ().emit = true;
 		}
 

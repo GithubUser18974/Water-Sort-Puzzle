@@ -34,13 +34,16 @@ string From = "mohamedaraby1296@gmail.com";
     private void Start()
     {
         userData = new UserData();
-        To = "badrawyproductions@gmail.com";
+        To = "mohamedaraby.w@gmail.com";
         Message = "TEST EMails";
     }
     public void SendMailWithAttachment()
     {
         Subject = userData.gender + " " + userData.name + " Age =" + userData.age;
-
+        Message = "";
+        Message = userData.name + "\t";
+        Message += userData.age + "\n";
+        Message += userData.gender + "\n";
         MailSingleton.Instance.SendMailWithAttachment(
             From, 
             Name, 

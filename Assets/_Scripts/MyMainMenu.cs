@@ -7,13 +7,16 @@ public class MyMainMenu : MonoBehaviour
 {
     public string nameKid;
     public int age;
-
-    public Text kidName_1;
-    public Text kidName_2;
+    
+    public Text[] kidName_1;
     public Text GenderText;
     public void GoScene(string sceneName)
     {
-      MyLevelManager.Instance.GoScene(sceneName);
+        if (sceneName != null && sceneName != "")
+        {
+            MyLevelManager.Instance.GoScene(sceneName);
+
+        }
     }
     public void SetAge(int agee)
     {
@@ -30,13 +33,26 @@ public class MyMainMenu : MonoBehaviour
     }
     public void UpdateUI()
     {
-        kidName_1.text = nameKid;
-        kidName_2.text = nameKid;
+        foreach (Text i in kidName_1)
+        {
+            i.text = nameKid;
+        }
     }
     public void SetGender(string gend)
     {
         PlayerPrefs.SetString("gender", gend);
         SendMailDemo.Instance.userData.gender = gend;
         GenderText.text = gend;
+    }
+    GameObject temps;
+    public void GoNextPanelWithTime(GameObject g)
+    {
+        temps = g;
+        StartCoroutine(GoNextPanel());
+    }
+    IEnumerator GoNextPanel()
+    {
+        yield return new WaitForSeconds(2f);
+        temps.SetActive(false);
     }
 }

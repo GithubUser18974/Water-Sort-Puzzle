@@ -48,6 +48,10 @@ namespace DOTS
 
 
         }
+        public void GoScene(string names)
+        {
+            MyLevelManager.Instance.GoScene(names);
+        }
         GameObject all_level;//levelmenu container
         GameObject all_mainMenu;
         void OnEnable()

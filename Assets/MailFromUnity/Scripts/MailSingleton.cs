@@ -18,7 +18,7 @@ public class MailSingleton : MonoBehaviour {
     bool EnableSSL = true;
     bool UseDefaultCredentials = false;
 
-    public Text txtInfo;
+    public string txtInfo;
     public static MailSingleton Instance;
 
     MailSender mailSender;
@@ -72,8 +72,8 @@ public class MailSingleton : MonoBehaviour {
     }
 
     IEnumerator ShowInfo(string msg){
-        txtInfo.text = msg;
+        txtInfo = msg;
         yield return new WaitForSeconds(3);
-        txtInfo.text = "";
+        txtInfo = "";
     }
 }
