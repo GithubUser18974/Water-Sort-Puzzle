@@ -28,17 +28,17 @@ namespace Maze
 
         void Update()
         {
-            startTime -= Time.deltaTime;
-            currentTime = string.Format("{0:0.0}", startTime);
-            print(currentTime);
+            //startTime -= Time.deltaTime;
+           // currentTime = string.Format("{0:0.0}", startTime);
+           // print(currentTime);
             if (startTime <= 0)
             {
                 startTime = 0;
-                SceneManager.LoadScene(0);
+               // SceneManager.LoadScene(0);
             }
         }
 
-
+       
         void Start()
         {
             totalTokensCount = tokenParent.transform.childCount;
@@ -64,6 +64,10 @@ namespace Maze
             else
                 highScore = 0;
 
+        }
+        public void GoHome()
+        {
+            MyLevelManager.Instance.GoScene("myMainMenu");
         }
         public void CompleteLevel()
         {
@@ -93,11 +97,11 @@ namespace Maze
                 guiskin.GetStyle("Timer").normal.textColor = defaultColorTime;
             }
             UnityEngine.GUI.Label(timerRect, currentTime, guiskin.GetStyle("Timer"));
-            UnityEngine.GUI.Label(new Rect(45, 100, 200, 200), tokenCount.ToString() + " / " + totalTokensCount.ToString());
-            UnityEngine.GUI.Label(new Rect(20, 10, Screen.width, Screen.height), "Current Score:  " + PlayerPrefs.GetInt("Score") + "  " +
-                        "HighScore:  " + PlayerPrefs.GetInt("HighScore") + "  " +
-                        "Deaths:   " + PlayerPrefs.GetInt("Deaths") + "  " +
-                         "Current Level:  " + CurrLevell);
+            //UnityEngine.GUI.Label(new Rect(45, 100, 200, 200), tokenCount.ToString() + " / " + totalTokensCount.ToString());
+            //UnityEngine.GUI.Label(new Rect(20, 10, Screen.width, Screen.height), "Current Score:  " + PlayerPrefs.GetInt("Score") + "  " +
+            //            "HighScore:  " + PlayerPrefs.GetInt("HighScore") + "  " +
+            //            "Deaths:   " + PlayerPrefs.GetInt("Deaths") + "  " +
+            //             "Current Level:  " + CurrLevell);
         }
         public void AddToken()
         {

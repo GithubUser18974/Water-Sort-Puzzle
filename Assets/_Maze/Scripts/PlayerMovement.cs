@@ -18,11 +18,31 @@ namespace Maze
             spawnPoint = transform.position;
             manager = manager.GetComponent<GameManager>();
         }
+        public void SetLeft()
+        {
+            input = new Vector3(-0.3f, 0, 0);
+        }
+        public void SetRight()
+        {
+            input = new Vector3(0.3f, 0, 0);
+        }
+        public void SetDown()
+        {
+            input = new Vector3(0, 0, -0.3f);
+        }
+        public void SetUp()
+        {
+            input = new Vector3(0, 0, 0.3f);
+        }
+        public void SetZero()
+        {
 
+        }
         // Update is called once per frame
         void Update()
         {
-            input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            //input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            print(input);
             if (GetComponent<Rigidbody>().velocity.magnitude < maxspeed)
                 GetComponent<Rigidbody>().AddForce(input * movespeed);
 
@@ -65,5 +85,8 @@ namespace Maze
             transform.position = spawnPoint;
             manager.deathScore += 1;
         }
+
+
+
     }
 }

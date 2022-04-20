@@ -40,28 +40,28 @@ public class GamePlayPanel : ShowHidable
         },false);
     }
 
-    public void OnClickSkip()
-    {
-        if (!AdsManager.IsVideoAvailable())
-        {
-            SharedUIManager.PopUpPanel.ShowAsInfo("Notice", "Sorry no video ads available.Check your internet connection!");
-            return;
-        }
+    public void OnClickSkip() { 
+    //{
+    //    if (!AdsManager.IsVideoAvailable())
+    //    {
+    //        SharedUIManager.PopUpPanel.ShowAsInfo("Notice", "Sorry no video ads available.Check your internet connection!");
+    //        return;
+    //    }
 
-        SharedUIManager.PopUpPanel.ShowAsConfirmation("Skip Level","Do you want watch Video ads to skip this level", success =>
-        {
-            if(!success)
-                return;
+    //    SharedUIManager.PopUpPanel.ShowAsConfirmation("Skip Level","Do you want watch Video ads to skip this level", success =>
+    //    {
+    //        if(!success)
+    //            return;
 
-            AdsManager.ShowVideoAds(true, s =>
-            {
-                if(!s)
-                    return;
-                ResourceManager.CompleteLevel(LevelManager.Instance.GameMode, LevelManager.Instance.Level.no);
-                UIManager.Instance.LoadNextLevel();
-            });
+    //        AdsManager.ShowVideoAds(true, s =>
+    //        {
+    //            if(!s)
+    //                return;
+    //            ResourceManager.CompleteLevel(LevelManager.Instance.GameMode, LevelManager.Instance.Level.no);
+    //            UIManager.Instance.LoadNextLevel();
+    //        });
           
-        });
+    //    });
     }
 
     public void OnClickMenu()

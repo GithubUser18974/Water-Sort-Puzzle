@@ -42,8 +42,35 @@ EditorBuildSettings:
     path: Assets/Alphabet/Scenes/alSentenceAlbum.unity
     guid: db9457b3cbbcbb94b9294d72dd8d08a0
   - enabled: 1
+    path: Assets/_Puzzles/Scenes/Patterns.unity
+    guid: 674a5853a93fbf647b03688928b453c8
+  - enabled: 1
+    path: Assets/_Puzzles/Scenes/LearntoWrite.unity
+    guid: c803558620283ab44b70ae52a18193e7
+  - enabled: 1
     path: Assets/Alphabet/Scenes/alUppercaseAlbum.unity
     guid: 37c47f3e137126146aa17870dd97081b
+  - enabled: 1
+    path: Assets/_Puzzles/Scenes/FindtheAnswer.unity
+    guid: 7701a9e1b107d4a499cc384c480eaf94
+  - enabled: 1
+    path: Assets/_Puzzles/Scenes/LearntoRead.unity
+    guid: 4e612d9e3a113f348bf25bb1e7a2f497
+  - enabled: 1
+    path: Assets/_Puzzles/Scenes/MenuList.unity
+    guid: 708619b3df9cbbb46ab938bd77e54549
+  - enabled: 1
+    path: Assets/_Puzzles/Scenes/Puzzle.unity
+    guid: 6903ed6b4ce7632408cb414c06705b81
+  - enabled: 1
+    path: Assets/_Puzzles/Scenes/Quiz.unity
+    guid: e6896e7ba301bb34384237dc9cd48276
+  - enabled: 1
+    path: Assets/_Puzzles/Scenes/SplashScreen.unity
+    guid: e945167c224d2a847940bc30f7337d05
+  - enabled: 1
+    path: Assets/_Puzzles/Scenes/SubmenuSelect.unity
+    guid: 75c6e43c6a9448144856c8cb134b1eae
   - enabled: 1
     path: Assets/_OrganizeWord/Scenes/Words.unity
     guid: 75b1f6265beee034fb716a20c9173fb3
@@ -53,6 +80,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/colorLoading.unity
     guid: 3d68b243fd37fb441b160635988866d1
+  - enabled: 1
+    path: Assets/_Maze/Alphabetic/ALevel6.unity
+    guid: b33672875842c18478999835d241750b
+  - enabled: 1
+    path: Assets/_Maze/Alphabetic/ALevel7.unity
+    guid: 5c8971bd1ef9ad7418b1f4defbc34b2e
+  - enabled: 1
+    path: Assets/_Maze/Level1.unity
+    guid: 75f7b6e0ad5a64d4aab257f771c84bad
+  - enabled: 1
+    path: Assets/_Maze/MyLevel6.unity
+    guid: 4f987e710cc3aee41b2e98ff95a7fd82
   - enabled: 1
     path: Assets/Scenes/colorMain.unity
     guid: 2cda990e2423bbf4892e6590ba056729

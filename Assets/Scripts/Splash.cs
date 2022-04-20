@@ -7,14 +7,9 @@ using UnityEngine;
 
 public class Splash : MonoBehaviour
 {
-    private IEnumerator Start()
+    private void Start()
     {
-        if (!AdsManager.HaveSetupConsent)
-        {
-            SharedUIManager.ConsentPanel.Show();
-            yield return new WaitUntil(() => !SharedUIManager.ConsentPanel.Showing);
-        }
-
+        
         GameManager.LoadScene("MainMenu");
     }
 }

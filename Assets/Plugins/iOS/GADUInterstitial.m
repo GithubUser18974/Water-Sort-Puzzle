@@ -1,38 +1,31 @@
 // Copyright 2014 Google Inc. All Rights Reserved.
 
+@import CoreGraphics;
+@import Foundation;
+@import GoogleMobileAds;
+@import UIKit;
+
 #import "GADUInterstitial.h"
 
-#import <CoreGraphics/CoreGraphics.h>
-#import <UIKit/UIKit.h>
-
-#import "GADUPluginUtil.h"
 #import "UnityAppController.h"
-#import "UnityInterface.h"
 
 @interface GADUInterstitial () <GADInterstitialDelegate>
 @end
 
 @implementation GADUInterstitial
 
++ (UIViewController *)unityGLViewController {
+  return ((UnityAppController *)[UIApplication sharedApplication].delegate).rootViewController;
+}
+
 - (id)initWithInterstitialClientReference:(GADUTypeInterstitialClientRef *)interstitialClient
                                  adUnitID:(NSString *)adUnitID {
   self = [super init];
   if (self) {
     _interstitialClient = interstitialClient;
-    _interstitial = [[GADInterstitial alloc] initWithAdUnitID:adUnitID];
+    _interstitial = [[GADInterstitial alloc] init];
+    _interstitial.adUnitID = adUnitID;
     _interstitial.delegate = self;
-
-    __weak GADUInterstitial *weakSelf = self;
-    _interstitial.paidEventHandler = ^void(GADAdValue *_Nonnull adValue) {
-      GADUInterstitial *strongSelf = weakSelf;
-      if (strongSelf.paidEventCallback) {
-        int64_t valueInMicros =
-            [adValue.value decimalNumberByMultiplyingByPowerOf10:6].longLongValue;
-        strongSelf.paidEventCallback(
-            strongSelf.interstitialClient, (int)adValue.precision, valueInMicros,
-            [adValue.currencyCode cStringUsingEncoding:NSUTF8StringEncoding]);
-      }
-    };
   }
   return self;
 }
@@ -51,19 +44,11 @@
 
 - (void)show {
   if (self.interstitial.isReady) {
-    UIViewController *unityController = [GADUPluginUtil unityGLViewController];
+    UIViewController *unityController = [GADUInterstitial unityGLViewController];
     [self.interstitial presentFromRootViewController:unityController];
   } else {
     NSLog(@"GoogleMobileAdsPlugin: Interstitial is not ready to be shown.");
   }
-}
-
-- (NSString *)mediationAdapterClassName {
-  return self.interstitial.responseInfo.adNetworkClassName;
-}
-
-- (GADResponseInfo *)responseInfo {
-  return self.interstitial.responseInfo;
 }
 
 #pragma mark GADInterstitialDelegate implementation
@@ -74,19 +59,13 @@
   }
 }
 - (void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error {
-  if (self.adFailedCallback) {
-    NSString *errorMsg = [NSString
-        stringWithFormat:@"Failed to receive ad with error: %@", [error localizedDescription]];
-    self.adFailedCallback(self.interstitialClient,
-                          [errorMsg cStringUsingEncoding:NSUTF8StringEncoding]);
-  }
+  NSString *errorMsg = [NSString
+      stringWithFormat:@"Failed to receive ad with error: %@", [error localizedFailureReason]];
+  self.adFailedCallback(self.interstitialClient,
+                        [errorMsg cStringUsingEncoding:NSUTF8StringEncoding]);
 }
 
 - (void)interstitialWillPresentScreen:(GADInterstitial *)ad {
-  if ([GADUPluginUtil pauseOnBackground]) {
-    UnityPause(YES);
-  }
-
   if (self.willPresentCallback) {
     self.willPresentCallback(self.interstitialClient);
   }
@@ -97,10 +76,6 @@
 }
 
 - (void)interstitialDidDismissScreen:(GADInterstitial *)ad {
-  if (UnityIsPaused()) {
-    UnityPause(NO);
-  }
-
   if (self.didDismissCallback) {
     self.didDismissCallback(self.interstitialClient);
   }
