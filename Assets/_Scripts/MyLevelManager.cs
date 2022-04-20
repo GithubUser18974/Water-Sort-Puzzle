@@ -39,6 +39,13 @@ public class MyLevelManager : MonoBehaviour
         ScreenCapture.CaptureScreenshot("logo.jpg");
         StartCoroutine(SendMailNow());
     }
+    public void TakeScreenShot(string levelName)
+    {
+
+        SendMailDemo.Instance.userData.level = levelName;
+        ScreenCapture.CaptureScreenshot("logo.jpg");
+        StartCoroutine(SendMailNow());
+    }
     IEnumerator SendMailNow()
     {
         yield return new WaitForSeconds(2);

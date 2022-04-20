@@ -22,14 +22,14 @@ namespace Organize_Word
         /*****************************************************************/
         public Text timerText;
         public Text winnerText;
+        public float timeLeft = 30.0f;
         public string[] finalSentens;
-        public Text scoreText;
         public int score = 0;
-
+       public    bool canCount = true;
         private void Start()
         {
             currentWordNumber = 0;
-            scoreText.text = score + " Points";
+           // scoreText.text = score + " Points";
             tempTime = timeLeft;
             // currentLevel = PlayerPrefs.GetInt("Level");
             if (maxLevel < currentLevel || LevelsImages.Length - 1 < currentLevel)
@@ -48,7 +48,9 @@ namespace Organize_Word
             if (!CheckIsHeIsRight(img))
             {
                 //He Is un Correct
-                GameOver();
+                // GameOver();
+                img.GetComponent<Animator>().SetTrigger("go"); 
+
                 return;
             }
             if (img.transform.parent == ArrangedParent)
@@ -58,7 +60,7 @@ namespace Organize_Word
             else if (img.transform.parent == UnArrangedParent)
             {
                 img.transform.parent = ArrangedParent.transform;
-
+                img.GetComponent<Image>().color = new Color32(246, 146, 22, 255);
             }
             currentWordNumber++;
             if (CheckIfPlayerWin())
@@ -84,64 +86,90 @@ namespace Organize_Word
             }
             return false;
         }
-
-        public float timeLeft = 30.0f;
+        void GoMainMenu()
+        {
+            MyLevelManager.Instance.GoScene("MyMainMenu");
+        }
 
         void Update()
         {
-            timeLeft -= Time.deltaTime;
-            if (timeLeft < 0)
+            if (canCount)
             {
-                GameOver();
+                timeLeft -= Time.deltaTime;
+                if (timeLeft < 0)
+                {
+                    GameOver();
+                }
+                timerText.text = (int)timeLeft + " Seconds";
             }
-            timerText.text = (int)timeLeft + " Seconds";
         }
 
         public void GameOver()
         {
+            canCount = false;
             score = 0;
-            scoreText.text = score + " Points";
+           // scoreText.text = score + " Points";
             GameOverPanel.SetActive(true);
             WinPanel.SetActive(false);
             ResetWordsInGameOver();
             timeLeft = tempTime + 9;
             currentWordNumber = 0;
+            MyLevelManager.Instance.TakeScreenShot(finalSentens[currentLevel]);
         }
         public void WinPanl()
         {
+            canCount = false;
             winnerText.text = finalSentens[currentLevel];
             WinPanel.SetActive(true);
             GameOverPanel.SetActive(false);
             score++;
-            scoreText.text = score + " Points";
-            if (currentLevel == maxLevel)
+            currentLevel++;
+            // scoreText.text = score + " Points";
+            if (currentLevel >= maxLevel)
             {
-                //Reach the final Question (repeat ) 
+                //Reach the final Question (repeat )
+                Invoke("GoMainMenu", 1.5f);
                 return;
             }
-            currentLevel++;
+            else
+            {
+                StartCoroutine(SHoeNext());
+            }
+            MyLevelManager.Instance.TakeScreenShot(finalSentens[currentLevel]);
+
+        }
+        IEnumerator SHoeNext()
+        {
+            yield return new WaitForSeconds(2);
+            Resting();
             // PlayerPrefs.SetInt("level", currentLevel);
             timeLeft = tempTime + 9;
             HideAllTheWordsAndShowCurrentWords();
             CurrentImage.sprite = LevelsImages[currentLevel];
             currentWordNumber = 0;
-
-
         }
-        public void HideAllTheWordsAndShowCurrentWords()
+        public void Resting()
+        {
+            canCount = true;
+            timeLeft = tempTime;
+
+            HideAllTheWordsAndShowCurrentWords();
+            CurrentImage.sprite = LevelsImages[currentLevel];
+            currentWordNumber = 0;
+        }
+        public void HideAllTheWordsAndShowCurrentWords()    
         {
             foreach (GameObject i in WordslevelsPanel)
             {
                 i.SetActive(false);
             }
-            print(currentLevel);
-            print(WordslevelsPanel[currentLevel].name);
             WordslevelsPanel[currentLevel].SetActive(true);
             ArrangedParent = WordslevelsPanel[currentLevel].transform.GetChild(0);
             UnArrangedParent = WordslevelsPanel[currentLevel].transform.GetChild(1);
         }
         public void ResetWordsInGameOver()
         {
+            Resting();
             for (int i = currentWordNumber - 1; i >= 0; i--)
             {
                 ArrangedParent.GetChild(i).transform.SetParent(UnArrangedParent);

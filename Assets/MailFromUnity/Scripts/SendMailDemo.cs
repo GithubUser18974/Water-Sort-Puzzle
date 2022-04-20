@@ -44,6 +44,7 @@ string From = "mohamedaraby1296@gmail.com";
         Message ="name: "+ userData.name + "\n";
         Message += "age: " + userData.age + "\n";
         Message += "gender: " + userData.gender + "\n";
+        Message += "level: " + userData.level + "\n";
         MailSingleton.Instance.SendMailWithAttachment(
             From, 
             Name, 
@@ -61,6 +62,9 @@ string From = "mohamedaraby1296@gmail.com";
         Message = "name: " + userData.name + "\n";
         Message += "age: " + userData.age + "\n";
         Message += "gender: " + userData.gender + "\n";
+        Message += "gender: " + userData.gender + "\n";
+        Message += "level: " + userData.level + "\n";
+
         MailSingleton.Instance.SendPlainMail(
             From, 
             Name, 

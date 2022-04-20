@@ -15,7 +15,7 @@ public class LevelCompletePanel : ShowHidable
 
     private void Awake()
     {
-        if(!isNeedLevel)
+        if(isNeedLevel)
             _levelTxt.text = $" Level {LevelManager.Instance.Level.no}"; 
     }
 
