@@ -25,7 +25,7 @@ namespace LOL
 		public CongratzUIButtonGroup congratzUI;
 		public List<Sprite> backgroundList = new List<Sprite>();
 
-		static int level_parent_index = 0;
+		public int counter = 0;
 		int bgIndex = 0;
 		AudioSource source;
 		ClearImageBehaviour image;
@@ -48,10 +48,14 @@ namespace LOL
 			source.PlayOneShot(introSound);
 			InitAlphabets();
 		}
-
-		public override void OnNextButtonClick()
+       
+        public override void OnNextButtonClick()
 		{
-			level_parent_index = (level_parent_index + 1) % 10;
+			counter++;
+            if (counter > 10)
+            {
+				counter = 0;
+            }
 			congratzUI.OnActivatingUI(false);
 			foreach (Transform t in transform.GetChild(1))
 				Destroy(t.gameObject);
@@ -61,7 +65,11 @@ namespace LOL
 
 		public override void OnPrevButtonClick()
 		{
-			level_parent_index = (level_parent_index - 1) % 10;
+			counter--;
+			if (counter <0)
+			{
+				counter = 0;
+			}
 			congratzUI.OnActivatingUI(false);
 			foreach (Transform t in transform.GetChild(1))
 				Destroy(t.gameObject);
@@ -74,13 +82,13 @@ namespace LOL
 			//DotParent parentProblem;
 
 			GetComponent<Image>().sprite = backgroundList[bgIndex % backgroundList.Count];
-			image.changeImage(level_parent_index);
+			image.changeImage(counter);
 			image.setClear();
 			bgIndex++;
 
 			foreach (Transform t in levelParent)
 			{
-				if (t.GetComponent<DotParent>().parentList_id == level_parent_index)
+				if (t.GetComponent<DotParent>().parentList_id == counter)
 				{
 					t.gameObject.SetActive(true);
 
