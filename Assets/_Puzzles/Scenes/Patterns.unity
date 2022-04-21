@@ -1201,10 +1201,11 @@ MonoBehaviour:
   levelParent: {fileID: 1627459773}
   congratzUI: {fileID: 1248714963}
   backgroundList:
-  - {fileID: 21300000, guid: dd1cf0b437ab44736858e4bef3679538, type: 3}
-  - {fileID: 21300000, guid: 3af807356569149c482bc56f001531d5, type: 3}
-  - {fileID: 21300000, guid: 681f6e8fd067a41c2a8058c5900efdf2, type: 3}
-  - {fileID: 21300000, guid: ccf1c44f5ac244dfe9a667234322b6f8, type: 3}
+  - {fileID: 21300000, guid: 606b6af0348c29648b506818d0d5b95d, type: 3}
+  - {fileID: 21300000, guid: 606b6af0348c29648b506818d0d5b95d, type: 3}
+  - {fileID: 21300000, guid: 606b6af0348c29648b506818d0d5b95d, type: 3}
+  - {fileID: 21300000, guid: 606b6af0348c29648b506818d0d5b95d, type: 3}
+  counter: 0
 --- !u!82 &400734343
 AudioSource:
   m_ObjectHideFlags: 0

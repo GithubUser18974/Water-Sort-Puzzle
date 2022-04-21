@@ -140,7 +140,7 @@ namespace Organize_Word
             if (currentLevel >= maxLevel)
             {
                 //Reach the final Question (repeat )
-                Invoke("GoMainMenu", 1.5f);
+                Invoke("GoMainMenu", 4f);
                 return;
             }
             else
