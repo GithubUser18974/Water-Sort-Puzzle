@@ -8,24 +8,31 @@ namespace DOTS
     public class LinkDot : MonoBehaviour {
 
 		GameObject container;
+        public bool isAlpha = false;
 		void Start () {
-            
-		}
+            if (isAlpha)
+            {
+                GameData.difficulty = 0;//0-4
+                GameData.getInstance().cLevel = 0;//0-49;
+
+                init();
+            }
+        }
 
         public void init() {
-           
+
 
             GameData.getInstance().clearData();
             GameData.instance.resetData();
             GameData.getInstance().init();
 
-           
+
 
             container = transform.Find("container").gameObject;
 
 
 
-           
+
 
             GameObject tBg = Resources.Load("linkdots/square") as GameObject;
             float gridW = GetComponent<SpriteRenderer>().sprite.bounds.size.x / GameData.bsize;
@@ -71,7 +78,7 @@ namespace DOTS
                 for (int j = 0; j < 4; j++)
                 {//add 4 link lines to each square
                     GameObject tlink = Instantiate(tLink, container.transform);
-                    
+
                     tlink.transform.localPosition = tbg.transform.localPosition;
                     tlink.transform.localScale = tbg.transform.localScale;
                     tlink.transform.localEulerAngles = new Vector3(0, 0, rotation[j]);
@@ -98,7 +105,7 @@ namespace DOTS
 
             }
 
-
+        
 
             int n = 1;//because 0 is no color
             for(int i = 0;i<GameData.instance.dotPoses.Count;i++) //(string tdotPoses in GameData.instance.dotPoses)

@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/_Scenes/MyMainMenu.unity
     guid: b5c9d0c1b299d334186593739e1b9df1
   - enabled: 1
-    path: Assets/_Maze/Alphabetic/ALevel6.unity
+    path: Assets/_Maze/Alphabetic/ALevel1.unity
     guid: b33672875842c18478999835d241750b
   - enabled: 1
     path: Assets/Link Dot/GameLevel/link3dTest.unity
@@ -86,12 +86,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/colorLoading.unity
     guid: 3d68b243fd37fb441b160635988866d1
-  - enabled: 1
-    path: Assets/_Maze/Alphabetic/ALevel7.unity
-    guid: 5c8971bd1ef9ad7418b1f4defbc34b2e
-  - enabled: 1
-    path: Assets/_Maze/Level1.unity
-    guid: 75f7b6e0ad5a64d4aab257f771c84bad
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/colorMain.unity
     guid: 2cda990e2423bbf4892e6590ba056729
@@ -119,4 +119,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FindThePairs/Scenes/Options.unity
     guid: 047c030e2bd70ad4b8d57b59b2b3b171
+  - enabled: 1
+    path: Assets/_Maze/Alphabetic/ALevel2.unity
+    guid: 9cb3ad728f05e434f93b2aca13f9a8b5
+  - enabled: 1
+    path: Assets/_Maze/Alphabetic/ALevel3.unity
+    guid: 42ac2190a88dd574a84889ec552fd059
+  - enabled: 1
+    path: Assets/_Maze/Alphabetic/ALevel4.unity
+    guid: bdea08d0a7131b44497afbbc6ed7b89e
+  - enabled: 1
+    path: Assets/_Maze/Alphabetic/ALevel5.unity
+    guid: 85e4cf25cc700ca4dab54665473d204c
+  - enabled: 1
+    path: Assets/_Maze/Level1.unity
+    guid: 158115141ac67d748b3ef537fe36800d
+  - enabled: 1
+    path: Assets/_Maze/Level2.unity
+    guid: 9708fd8574cadcc40be8098123aae93c
+  - enabled: 1
+    path: Assets/_Maze/Level3.unity
+    guid: 12920d90cddfb34418a83def6912edaa
+  - enabled: 1
+    path: Assets/_Maze/Level4.unity
+    guid: 90c8636ae90b2a4418f4eb5991e57ae0
+  - enabled: 1
+    path: Assets/_Maze/Level5.unity
+    guid: 91e0dc00c9e05b54daa753c9485d6940
   m_configObjects: {}

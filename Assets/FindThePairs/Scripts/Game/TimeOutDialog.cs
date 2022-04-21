@@ -69,6 +69,8 @@ namespace IndieSudioFTPEditors
 			}
 			timeOutDialogSpriteImage.enabled = true;
 			timeOutDialogAnimator.SetTrigger("Running");
+			MyLevelManager.Instance.TakeScreenShot();
+
 		}
 
 		///Hide the TimeOut Dialog

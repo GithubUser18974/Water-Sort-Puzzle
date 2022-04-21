@@ -111,6 +111,7 @@ namespace IndieSudioFTPEditors
 			}
 			winDialogSpriteImage.enabled = true;
 			winDialogAnimator.SetTrigger("Running");
+			MyLevelManager.Instance.TakeScreenShot();
 		}
 
 		/// <summary>
