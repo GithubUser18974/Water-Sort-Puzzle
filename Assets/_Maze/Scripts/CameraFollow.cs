@@ -6,7 +6,7 @@ namespace Maze
 {
     public class CameraFollow : MonoBehaviour
     {
-
+       
       
     }
 }

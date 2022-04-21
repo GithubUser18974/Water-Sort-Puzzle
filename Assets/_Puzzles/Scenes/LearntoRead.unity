@@ -2620,10 +2620,10 @@ MonoBehaviour:
   animalSource: {fileID: 1198620477}
   animalName: {fileID: 1074787560}
   backgroundList:
-  - {fileID: 21300000, guid: 50cb564094312bf4abd07c96f955a06e, type: 3}
-  - {fileID: 21300000, guid: cb95d45c0e3b5d24ba5cb351c1af98dd, type: 3}
-  - {fileID: 21300000, guid: 174a95678e211fd4e9906ffff71a66c7, type: 3}
-  - {fileID: 21300000, guid: dac8bbdfded5a274098460fd9af5fc54, type: 3}
+  - {fileID: 21300000, guid: 8d2adbaa07e8ec5449cc1a79506dcbcb, type: 3}
+  - {fileID: 21300000, guid: ccf1c44f5ac244dfe9a667234322b6f8, type: 3}
+  - {fileID: 21300000, guid: 4749c1477664d47138ec3747f29309b8, type: 3}
+  - {fileID: 21300000, guid: dd1cf0b437ab44736858e4bef3679538, type: 3}
   animalGroupList:
   - objectName: Antelope
     objectAlias: Aa

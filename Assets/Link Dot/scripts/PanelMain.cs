@@ -50,6 +50,8 @@ namespace DOTS
         }
         public void GoScene(string names)
         {
+
+            Destroy(GameObject.FindGameObjectWithTag("Enemy"));
             MyLevelManager.Instance.GoScene(names);
         }
         GameObject all_level;//levelmenu container

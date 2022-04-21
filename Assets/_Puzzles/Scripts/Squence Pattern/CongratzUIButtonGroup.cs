@@ -40,7 +40,7 @@ namespace LOL
                 canvas.alpha = 1;
             else
                 canvas.alpha = 0;
-
+            MyLevelManager.Instance.TakeScreenShot();
             canvas.interactable = a;
             canvas.blocksRaycasts = a;
         }

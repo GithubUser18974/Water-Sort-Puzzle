@@ -224,6 +224,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 100000, guid: 364f985f53748b148892f54395371f0c, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 364f985f53748b148892f54395371f0c, type: 2}
       propertyPath: m_LocalPosition.x
       value: 8.96557808
@@ -509,7 +513,7 @@ GameObject:
   - component: {fileID: 2014910810}
   m_Layer: 0
   m_Name: music
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -3870,7 +3870,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ALevel6
+          m_StringArgument: ALevel1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &625274107
@@ -7705,7 +7705,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1380869555
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -71,19 +71,9 @@ namespace Maze
         }
         public void CompleteLevel()
         {
+            ShowCongeratulations();
             //Application.LoadLevel(CurrLevel);
-            CurrLevel = SceneManager.GetActiveScene().buildIndex;
-            if (CurrLevel < SceneManager.sceneCountInBuildSettings)
-            {
-                SceneManager.LoadScene(CurrLevel + 1);
-                CurrLevell++;
-                PlayerPrefs.SetInt("Level Completed", CurrLevell);
-                PlayerPrefs.SetInt("Score", currScore);
-                PlayerPrefs.SetInt("Deaths", deathScore);
-                PlayerPrefs.SetInt("HighScore", highScore);
-            }
-            else
-                print("You won!");
+         
         }
         void OnGUI()
         {
@@ -107,5 +97,23 @@ namespace Maze
         {
             tokenCount += 1;
         }
+        public void ShowNext()
+        {
+            if (NextLevel == "null")
+            {
+                GoHome();
+            }
+            MyLevelManager.Instance.GoScene(NextLevel);
+        }
+
+        public GameObject congeratulations;
+        public string NextLevel;
+
+        public void ShowCongeratulations()
+        {
+            congeratulations.SetActive(true);
+            MyLevelManager.Instance.TakeScreenShot();
+        }
+
     }
 }

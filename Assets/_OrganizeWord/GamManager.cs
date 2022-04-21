@@ -26,6 +26,8 @@ namespace Organize_Word
         public string[] finalSentens;
         public int score = 0;
        public    bool canCount = true;
+        public AudioSource audioSources;
+        public AudioClip wrong, correct;
         private void Start()
         {
             currentWordNumber = 0;
@@ -49,10 +51,14 @@ namespace Organize_Word
             {
                 //He Is un Correct
                 // GameOver();
+                audioSources.clip = wrong;
+                audioSources.Play();
                 img.GetComponent<Animator>().SetTrigger("go"); 
 
                 return;
             }
+            audioSources.clip = correct;
+            audioSources.Play();
             if (img.transform.parent == ArrangedParent)
             {
                 img.transform.parent = UnArrangedParent.transform;
@@ -82,6 +88,8 @@ namespace Organize_Word
         {
             if (UnArrangedParent.childCount <= 0)
             {
+                audioSources.clip = correct;
+                audioSources.Play();
                 return true;
             }
             return false;
@@ -115,6 +123,8 @@ namespace Organize_Word
             timeLeft = tempTime + 9;
             currentWordNumber = 0;
             MyLevelManager.Instance.TakeScreenShot(finalSentens[currentLevel]);
+            audioSources.clip = wrong;
+            audioSources.Play();
         }
         public void WinPanl()
         {
@@ -124,6 +134,8 @@ namespace Organize_Word
             GameOverPanel.SetActive(false);
             score++;
             currentLevel++;
+            audioSources.clip = correct;
+            audioSources.Play();
             // scoreText.text = score + " Points";
             if (currentLevel >= maxLevel)
             {
