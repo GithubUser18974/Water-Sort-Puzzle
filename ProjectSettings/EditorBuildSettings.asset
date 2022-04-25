@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Link Dot/GameLevel/linkMainMenu.unity
     guid: 4c918370813e8fe448bbddc13f8fef2a
   - enabled: 1
+    path: Assets/_Scenes/Sel.unity
+    guid: 0a7303264c6d9f048b51146b3b7c1be8
+  - enabled: 1
     path: Assets/_Maze/MyLevel6.unity
     guid: 4f987e710cc3aee41b2e98ff95a7fd82
   - enabled: 1
